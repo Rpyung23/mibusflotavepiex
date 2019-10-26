@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/id_rutas"
+            android:icon="@drawable/maps"
+            android:title="@string/text_rutas"
+            />
+        <item
+            android:id="@+id/id_despacho"
+            android:icon="@drawable/despacho"
+            android:title="@string/text_despacho" />
+        <item
+            android:id="@+id/id_conteo"
+            android:icon="@drawable/company"
+            android:title="@string/text_conteo" />
+    </group>
+
+    <item android:title="Comunicación">
+        <menu>
+            <item
+                android:id="@+id/id_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share" />
+            <item
+                android:id="@+id/id_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/menu_send" />
+        </menu>
+    </item>
+
+</menu>

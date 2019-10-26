@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_vueltas"
+        icon="@drawable/despachov"
+        title="Despacho" />
+    <tab
+        id="@+id/tab_time"
+        icon="@drawable/despacho_c_g"
+        title="Conteo General (Horas)" />
+</tabs>

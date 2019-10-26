@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".fragments.DespachoFragment">
+    <com.roughike.bottombar.BottomBar
+        app:bb_inActiveTabColor="@color/primaryText"
+        app:bb_activeTabColor="@color/primaryText"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/bottombar_despacho"
+        android:layout_width="match_parent"
+        app:bb_tabXmlResource="@xml/bottombar_tabs"
+        android:layout_height="@dimen/bb_height">
+    </com.roughike.bottombar.BottomBar>
+    <FrameLayout
+        android:id="@+id/fragment_contenedor_despacho"
+        android:layout_marginTop="@dimen/bb_height"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

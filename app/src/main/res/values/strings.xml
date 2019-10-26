@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Coop Union</string>
+    <string name="hint_contraseña">Ingrese su contraseña</string>
+    <string name="hint_usuario">Ingrese su usuario</string>
+    <string name="btn_Ingresar">Ingresar</string>
+    <string name="title_activity_menu">Vigitrack Cia.Ltda</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_toolbar_drawer">Vigitrack Cia.Ltda</string>
+    <string name="text_rutas">Flotas</string>
+    <string name="text_despacho">Despacho</string>
+    <string name="text_conteo">Producción</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_share">Compartir</string>
+    <string name="menu_send">Enviar</string>
+    <string name="developer">Developer : Vigitrack Cia.Ltda</string>
+    <string name="generar_product">GENERAR REPORTE</string>
+    <string-array name="tipo_mapas_array">
+        <item>Normal</item>
+        <item>Satelital</item>
+        <item>Hibrido</item>
+        <item>Terrestre</item>
+    </string-array>
+</resources>
