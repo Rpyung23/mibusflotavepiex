@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -43,6 +44,7 @@ import static com.vigitrackecuador.mibusflotaunion.LoginActivity.url_despacho_ho
  */
 public class DespachoHorasFragment extends Fragment
 {
+    private static final int MY_SOCKET_TIMEOUT_MS = 30000 ;
     ImageButton imageButtonFechaDespacho;
     ImageButton imageButtonHoraInicial;
     ImageButton imageButtonHoraFinal;
@@ -181,7 +183,9 @@ public class DespachoHorasFragment extends Fragment
         String envio3="horainicial="+stringHoraInicial;
         String envio4="horafinal="+stringHoraFinal;
         String newUrlConteoGHoras=url_despacho_horas+"?"+envio1+"&"+envio2+"&"+envio3+"&"+envio4;
+
         jsonArrayRequest = new JsonArrayRequest(newUrlConteoGHoras, new Response.Listener<JSONArray>() {
+
             @Override
             public void onResponse(JSONArray response)
             {
@@ -198,6 +202,7 @@ public class DespachoHorasFragment extends Fragment
                     oCGH.setTotalSubida(auxSubidaT);
                     oCGH.setTotalBajada(auxBajadaT);
                 } catch (JSONException e) {
+                    Toast.makeText(getContext(), "try : "+e.getMessage(), Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
                 }
                 txtUnidad.setText("Unidad "+idBus);
@@ -216,14 +221,16 @@ public class DespachoHorasFragment extends Fragment
             public void onErrorResponse(VolleyError error)
             {
                 String servidornorespode="null";
-                if(servidornorespode.equals(error.getMessage().toString()))
+                Toast.makeText(getContext(),"Error "+error.getMessage(),Toast.LENGTH_LONG).show();
+               /* if(servidornorespode.equals(error.getMessage()))
                 {
-                    Toast.makeText(getContext(), "Servidor no responde vuelva a intentar", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext()," "+error.getMessage(),Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getContext(), "Servidor no responde vuelva a intentar", Toast.LENGTH_SHORT).show();
                 }
                 else
                     {
                         Toast.makeText(getContext(), "No existe información", Toast.LENGTH_SHORT).show();
-                    }
+                    }*/
                 BajadaP1.setText("0000");
                 BajadaP2.setText("0000");
                 BajadaP3.setText("0000");
@@ -235,6 +242,10 @@ public class DespachoHorasFragment extends Fragment
                 progressDialog.hide();
             }
         });
+        jsonArrayRequest.setRetryPolicy(new DefaultRetryPolicy(
+                MY_SOCKET_TIMEOUT_MS,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         requestQueuejsonConteoGHoras = Volley.newRequestQueue(getContext());
         requestQueuejsonConteoGHoras.add(jsonArrayRequest);
     }
