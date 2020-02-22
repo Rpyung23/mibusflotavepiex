@@ -116,7 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:background="@drawable/bus_ico_despacho_horas"
+                    android:background="@drawable/bus_vepiex"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 </ImageView>

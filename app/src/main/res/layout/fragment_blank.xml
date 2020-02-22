@@ -7,8 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".fragments.BlankFragment">
     <ImageView
-        android:background="@drawable/logofinalunion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:background="@drawable/logo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto_logo">
 
     </ImageView></LinearLayout>

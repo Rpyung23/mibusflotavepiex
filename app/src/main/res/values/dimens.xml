@@ -9,4 +9,5 @@
     <dimen name="alto_btn_pdf">39dp</dimen>
     <dimen name="alto_toolbar">60dp</dimen>
     <dimen name="toolbar_alto_pdf">40dp</dimen>
+    <dimen name="alto_logo">500dp</dimen>
 </resources>

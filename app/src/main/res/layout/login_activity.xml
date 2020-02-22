@@ -22,9 +22,9 @@
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="248dp"
+                android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:background="@drawable/logofinalunion"
+                android:background="@drawable/logo"
                 android:scaleType="fitCenter">
 
             </androidx.appcompat.widget.AppCompatImageView>
@@ -38,15 +38,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <LinearLayout
+                        android:layout_marginBottom="3dp"
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <ImageView
+                            android:layout_marginRight="3dp"
                             android:layout_width="60dp"
                             android:scaleType="centerCrop"
                             android:layout_height="match_parent"
-                            android:background="@drawable/userunion">
+                            android:background="@drawable/user">
 
                         </ImageView>
                         <androidx.appcompat.widget.AppCompatEditText
@@ -63,7 +65,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <ImageView
-                            android:background="@drawable/claveunion"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/pass"
                             android:scaleType="centerCrop"
                             android:layout_height="match_parent"
                             android:layout_width="60dp">
